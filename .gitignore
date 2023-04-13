@@ -1,0 +1,15 @@
+__pycache__
+.ipynb_checkpoints
+.vscode
+Data_Analysis
+img_processed
+logger
+opencv-python-course
+opencv-tutorial
+photo
+sample
+unit_test
+venv
+Video
+Video-original
+*.ipynb
