@@ -43,5 +43,5 @@ if __name__ == '__main__':
     t2 = time.time()
     print(f'===>Time for math.factorial(): {t2-t1}')
 
-    num = 'string'
-    print(f'{num}! = {factorial(num)}\n')
+    # num = 'string'
+    # print(f'{num}! = {factorial(num)}\n')
