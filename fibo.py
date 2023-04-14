@@ -1,6 +1,8 @@
 import time
-"""Recursive Example: calculate Fibonacci sequence.
-遞廻函式例子: 求斐波那契數"""
+"""
+Recursive Example: calculate Fibonacci sequence.
+遞廻函式例子: 求斐波那契數列
+"""
 
 
 def fibo(n):
@@ -25,7 +27,8 @@ def fibo(n):
 
 
 from functools import lru_cache
-"""#### 利用 'functools' 模組的快取策略
+"""
+利用 'functools' 模組的快取策略
 
 The LRU caching scheme in 'functools' Module is to remove
 the least recently used frame when the cache is full,
@@ -33,26 +36,27 @@ and a new page is referenced which is not there in the cache.
 
 There are generally two cases with LRU Cache,
 
-    1. Page hit: If the required page is found in the main memory, it is a page hit.
-
-    2. Page Fault: If the required page is not found in the main memory, page fault occurs.
+1. Page hit: If the required page is found in the main memory,
+    it is a page hit.
+2. Page Fault: If the required page is not found in the main 
+    memory, page fault occurs.
 
 When a page is referenced, the required page may be in the memory.
 
-    1. If it is in the memory, we need to detach the node of the list and bring it to the front of the queue.
-
-    2. If the required page is not in memory, we bring that in memory.
+1. If it is in the memory, we need to detach the node of 
+    the list and bring it to the front of the queue.
+2. If the required page is not in memory, 
+    we bring that in memory.
 
 In other words,
 
-    1. we add a new node to the front of the queue
+1. we add a new node to the front of the queue
+2. update the corresponding node address in the hash.
 
-    2. update the corresponding node address in the hash.
-
-If the queue is full, i.e. all the frames are full, we remove a node from the rear of the queue
-
-When insert into the queue, we add the new node to the front of the queue
-
+If the queue is full, i.e. all the frames are full, 
+we remove a node from the rear of the queue.
+When insert into the queue, we add the new node to the front 
+of the queue.
 """
 
 
