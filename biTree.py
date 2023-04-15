@@ -1,5 +1,7 @@
-""" This version of Binary Search Tree implemented with debugging
-codes. See bsTree.py for prodution codes"""
+"""
+This version of Binary Search Tree implemented with debugging
+codes. See bsTree.py for prodution codes
+"""
 
 import random
 import traceback
