@@ -1,4 +1,5 @@
-""" This example demonstrate sending an html email via Google email account
+"""
+This example demonstrate sending an html email via Google email account
 to multiple recipients, contained in a text file, that has one email per line.
 試著同時發送一份郵件給一群人。
 """
