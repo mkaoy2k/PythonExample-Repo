@@ -13,3 +13,5 @@
 /Video
 /Video-original
 *.ipynb
+*.yaml
+python.code-workspace
