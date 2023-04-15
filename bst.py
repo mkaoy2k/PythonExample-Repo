@@ -1,4 +1,5 @@
-""" This implementation defines two classes: Node and BinarySearchTree. 
+""" 
+This implementation defines two classes: Node and BinarySearchTree. 
 Node represents a node in the binary search tree, 
     with a value and pointers to its left and right children. 
 

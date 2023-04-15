@@ -1,6 +1,8 @@
 from biTree import biNode
 import glog as log
-""" This version is with debug logging codes"""
+""" 
+This version is with debug logging codes
+"""
 
 """ Example code, demonstrating:
     1. Build a binary tree from a list of integers

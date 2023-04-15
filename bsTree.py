@@ -1,6 +1,8 @@
 import random
-""" This version of Binary Search Tree implemented with production
-codes. See biTree.py for debugging codes"""
+""" 
+This version of Binary Search Tree implemented with production
+codes. See biTree.py for debugging codes
+"""
 
 
 class biNode:

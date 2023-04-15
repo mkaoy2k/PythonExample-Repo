@@ -1,4 +1,4 @@
-from biTree import biNode
+from biTree_v2 import biNode
 import glog as log
 
 """ Example code, demonstrating:
