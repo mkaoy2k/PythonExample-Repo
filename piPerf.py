@@ -1,5 +1,6 @@
 import time
 from piLib import *
+import decimal as dec
 
 """Measure various Pi estimate functions.
 Five methods to estimate π
@@ -34,7 +35,7 @@ if __name__ == '__main__':
     print(f"===>Time took {(t2-t1):.2f} seconds\n")
 
     digits = 50
-    getcontext().prec = digits
+    dec.getcontext().prec = digits
     print(f"3. Using 'math' Module:")
     t1 = time.time()
     pi = pi_math_constant(digits)
