@@ -15,5 +15,5 @@
 /Video-original
 *.ipynb
 *.yaml
-python.code-workspace
+Python.code-workspace
 credentials.py
