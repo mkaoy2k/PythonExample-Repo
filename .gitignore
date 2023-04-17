@@ -14,6 +14,7 @@
 /venv2
 /Video
 /Video-original
+*.html
 *.ipynb
 *.yaml
 Python.code-workspace
