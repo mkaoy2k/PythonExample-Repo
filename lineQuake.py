@@ -1,5 +1,8 @@
-"""爬取台灣中央氣象局會地震資訊及位置圖
-使用 Requests 函式庫的 get 的方法，抓取氣象觀測資料的 JSON 網址，
+"""
+爬取台灣中央氣象局會地震資訊及位置圖
+使用 Requests 函式庫的 get 的方法，抓取氣象觀測資料的 JSON 網址
+(https://opendata.cwb.gov.tw/devManual/insrtuction)。
+
 接著使用字典的取值方法，搭配 for-迴圈印出某一地震强度以上 (如4.0)
 城市名稱、區域名稱和觀測點名稱。
 """
@@ -7,7 +10,7 @@
 import requests
 from credentials import line_gw_url, line_pc_token, line_pc_name, quake_url, quake_magnitude
 from datetime import date, timedelta
-
+import json
 
 def send_line(msg, img):
     # 透過 LINE Notify 傳送信息 msg (必要) 和 圖片 img (非必要)
@@ -29,18 +32,26 @@ def send_line(msg, img):
 
 data = requests.get(quake_url)  # 台灣中央氣象局網址
 data_json = data.json()
-eq = data_json['records']['earthquake']    # 轉換成 json 格式
+
+## Dump the Json data into a file to examine
+# file_write = f'Sample/earthquake.json'
+# with open(file_write, 'w') as f:
+#   json.dump(data_json, f, indent=2)
+# print(
+#     f'===>請打開 {file_write} 檢視 JSON 格式的檔案...\n')
+
+eq = data_json['records']['Earthquake']    # 轉換成 json 格式
 
 # 算出昨天日期
 yesterday = date.today() - timedelta(days=1)
 
 # Loop thru all events
 for i in eq:
-    loc = i['earthquakeInfo']['epiCenter']['location']
-    val = i['earthquakeInfo']['magnitude']['magnitudeValue']
-    dep = i['earthquakeInfo']['depth']['value']
-    eq_time = i['earthquakeInfo']['originTime']
-    img = i['reportImageURI']
+    loc = i['EarthquakeInfo']['Epicenter']['Location']
+    val = i['EarthquakeInfo']['EarthquakeMagnitude']['MagnitudeValue']
+    dep = i['EarthquakeInfo']['FocalDepth']
+    eq_time = i['EarthquakeInfo']['OriginTime']
+    img = i['ReportImageURI']
     msg = f'{loc}，芮氏規模 {val} 級，深度 {dep} 公里，發生時間 {eq_time}'
     print(msg)
 
