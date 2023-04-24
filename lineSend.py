@@ -13,6 +13,8 @@ Syntax:
 
 import requests
 from credentials import line_gw_url, line_my_token, line_my_name, line_fileMsg
+
+# ! pip install 'absl-py' Module if needed.
 from absl import app
 from absl import flags
 
