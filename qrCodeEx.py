@@ -32,7 +32,7 @@ def generate_qrcode(url, fn):
 
 from absl import app
 from absl import flags
-from credentials import qr_url, qr_file
+from sample.credentials import qr_url, qr_file
 
 FLAGS = flags.FLAGS
 

@@ -2,7 +2,7 @@
 via textbelt HTTP text server
 試著經 textbelt HTTP 服務器，發簡訊到一個手機號"""
 
-from credentials import mobile_number
+from sample.credentials import mobile_number
 import requests
 
 

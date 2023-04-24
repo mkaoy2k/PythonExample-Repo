@@ -201,7 +201,7 @@ if __name__ == '__main__':
         print(f'send_email(): 無法送出郵件\n')
 
     # 組合簡訊郵件
-    from credentials import mobile_number, SMSgateway, SMSmsg
+    from sample.credentials import mobile_number, SMSgateway, SMSmsg
     subject = "test SMS from Michael Kao"
     body = SMSmsg
 

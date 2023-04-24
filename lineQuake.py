@@ -8,7 +8,7 @@
 """
 
 import requests
-from credentials import line_gw_url, line_pc_token, line_pc_name, quake_url, quake_magnitude
+from sample.credentials import line_gw_url, line_pc_token, line_pc_name, quake_url, quake_magnitude
 from datetime import date, timedelta
 import json
 
