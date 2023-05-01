@@ -1,5 +1,6 @@
 """用隨機亂數產生器來設計一個擲骰子遊戲"""
 import random
+# pip install pillow if 'PIL' Module is missing.
 from PIL import Image
 
 

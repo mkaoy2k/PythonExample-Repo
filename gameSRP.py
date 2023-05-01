@@ -9,7 +9,6 @@ The winner of the game wins two show-hands out of three.
 
 import random
 
-
 def u_win(comp_guess_idx, ur_guess_idx):
     """Compare two integers (0-2)
     0: 剪刀
