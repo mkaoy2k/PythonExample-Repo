@@ -11,7 +11,7 @@ def xyz():
 """
 import glog as log
 import datetime
-
+import random
 
 class inAndOutLog():
     def __init__(self, funcName):
@@ -33,3 +33,31 @@ def func_timer_decorator(func):
         with inAndOutLog(func.__name__):
             return func(*args, **kwargs)
     return func_wrapper
+
+# Function testing
+# Comparing read time between List and Tuple
+# Alternatively, check with perf_LvsT.py
+@func_timer_decorator
+def lookupList(cnt):
+    L = list(range(cnt))
+    for _ in range(cnt):
+        i = random.randint(0, L[cnt-1])
+        j = random.randint(0, L[cnt-1])
+        _ = abs( L[i] - L[j] )
+
+@func_timer_decorator
+def lookupTuple(cnt):
+    T = tuple(range(cnt))
+    for _ in range(cnt):
+        i = random.randint(0, T[cnt-1])
+        j = random.randint(0, T[cnt-1])
+        _ = abs( T[i] - T[j] )
+
+if __name__ == '__main__':
+
+    # Number of times to read a List vs Tuple
+    max_loop = 2_000_000
+
+    print(f'{max_loop:,} times to initiate and read a List vs Tuple:')
+    lookupList(max_loop)
+    lookupTuple(max_loop)
