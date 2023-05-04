@@ -23,7 +23,7 @@ class FibonacciHeap:
             """Dump the Node"""
             str_dump = f'Dump key={self.key}\n'
             str_dump += f'===>value:\t{self.value}\n'
-            # str_dump += f'===>parent:\t{self.parent}\n'
+            str_dump += f'===>parent:\t{self.parent}\n'
             # str_dump += f'===>child:\t{self.child}\n'
             # str_dump += f'===>left:\t{self.left}\n'
             # str_dump += f'===>right:\t{self.right}\n'
@@ -214,22 +214,32 @@ if __name__ == '__main__':
     f = FibonacciHeap()
 
     f.insert(10)
+    print('===> 10 inserted')
     f.insert(2)
+    print('===> 2 inserted')
     f.insert(15)
+    print('===> 15 inserted')
     f.insert(6)
+    print('===> 6 inserted')
 
     m = f.find_min()
+    print('Find min of 2 expected')
     print(f'{m}')  # 2
 
     q = f.extract_min()
+    print('Extract min of 2 expected')
     print(f'{q}')   # 2
 
     q = f.extract_min()
+    print('Extract min of 6 expected')
     print(f'{q}')   # 6
+
 
     f2 = FibonacciHeap()
     f2.insert(100)
+    print('===> 100 inserted')
     f2.insert(56)
+    print('===> 56 inserted')
 
     f3 = f.merge(f2)
     x = f3.root_list.right  # pointer to random node
@@ -237,7 +247,9 @@ if __name__ == '__main__':
 
     # print the root list using the iterate class method
     list_root = [x.key for x in f3.iterate(f3.root_list)]
-    print(f'The root list={list_root}\n')  # [10, 1, 56]
+    print('Root-list [10, 1, 56] expected')
+    print(f'===> {list_root}\n')  # [10, 1, 56]
 
     q = f3.extract_min()
+    print('Extract min of 1 expected')
     print(f'{q}')  # 1
