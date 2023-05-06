@@ -211,45 +211,47 @@ class FibonacciHeap:
 
 # Functional Test
 if __name__ == '__main__':
-    f = FibonacciHeap()
+    H = FibonacciHeap()
 
-    f.insert(10)
+    H.insert(10)
     print('===> 10 inserted')
-    f.insert(2)
+    H.insert(2)
     print('===> 2 inserted')
-    f.insert(15)
+    H.insert(15)
     print('===> 15 inserted')
-    f.insert(6)
+    H.insert(6)
     print('===> 6 inserted')
 
-    m = f.find_min()
+    m = H.find_min()
     print('Find min of 2 expected')
     print(f'{m}')  # 2
 
-    q = f.extract_min()
+    q = H.extract_min()
     print('Extract min of 2 expected')
     print(f'{q}')   # 2
 
-    q = f.extract_min()
+    q = H.extract_min()
     print('Extract min of 6 expected')
     print(f'{q}')   # 6
 
 
-    f2 = FibonacciHeap()
-    f2.insert(100)
+    H2 = FibonacciHeap()
+    H2.insert(100)
     print('===> 100 inserted')
-    f2.insert(56)
+    H2.insert(56)
     print('===> 56 inserted')
 
-    f3 = f.merge(f2)
-    x = f3.root_list.right  # pointer to random node
-    f3.decrease_key(x, 1)
+    H3 = H.merge(H2)
+    x = H3.root_list.right  # pointer to random node
+    H3.decrease_key(x, 1)
 
     # print the root list using the iterate class method
-    list_root = [x.key for x in f3.iterate(f3.root_list)]
+    list_root = [x.key for x in H3.iterate(H3.root_list)]
     print('Root-list [10, 1, 56] expected')
     print(f'===> {list_root}\n')  # [10, 1, 56]
 
-    q = f3.extract_min()
+    q = H3.extract_min()
     print('Extract min of 1 expected')
     print(f'{q}')  # 1
+    
+
