@@ -1,24 +1,24 @@
 greeting = 'Hello'
 name = 'Michael'
 
-print('Concatenating strings with plus sign...\n')
+print('Concatenating strings with plus sign...')
 message = greeting + ', ' + name + '. Welcome!'
-print('   ', message)
+print('===>', message)
 
-print('\nUsing a str-type "format" class method...\n')
+print('Using a str-type "format" class method...')
 message2 = '{}, {}. Welcome!'.format(greeting, name)
-print('   ', message2)
+print('===>', message2)
 
-print('\nUsing formatter "f" on Python 3, not available on Python 2...\n')
+print('Using f-formatter on Python 3, not available on Python 2...')
 message3 = f'{greeting}, {name}. Welcome!'
-print('   ', message3)
+print('===>', message3)
 
-print('\nConverting a string to upper case...\n')
+print('Converting a string to upper case...')
 message4 = f'{greeting}, {name.upper()}. Welcome!'
-print('   ', message4)
+print('===>', message4)
 
 # find class methods and detail description of a method
-print('\nInquiring all class methods of a str-type variable "name":', name, '\n', dir(name))
-print('\nInquiring a class description, "str.lower()":\n')
+print('Inquiring all class methods of a str-type variable "name":', name, '', dir(name))
+print('Inquiring a class description, "str.lower()":')
 help(str.lower)
 
