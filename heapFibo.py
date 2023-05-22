@@ -23,7 +23,7 @@ class FibonacciHeap:
             """Dump the Node"""
             str_dump = f'Dump key={self.key}\n'
             str_dump += f'===>value:\t{self.value}\n'
-            str_dump += f'===>parent:\t{self.parent}\n'
+            # str_dump += f'===>parent:\t{self.parent}\n'
             # str_dump += f'===>child:\t{self.child}\n'
             # str_dump += f'===>left:\t{self.left}\n'
             # str_dump += f'===>right:\t{self.right}\n'
@@ -211,47 +211,33 @@ class FibonacciHeap:
 
 # Functional Test
 if __name__ == '__main__':
-    H = FibonacciHeap()
+    f = FibonacciHeap()
 
-    H.insert(10)
-    print('===> 10 inserted')
-    H.insert(2)
-    print('===> 2 inserted')
-    H.insert(15)
-    print('===> 15 inserted')
-    H.insert(6)
-    print('===> 6 inserted')
+    f.insert(10)
+    f.insert(2)
+    f.insert(15)
+    f.insert(6)
 
-    m = H.find_min()
-    print('Find min of 2 expected')
+    m = f.find_min()
     print(f'{m}')  # 2
 
-    q = H.extract_min()
-    print('Extract min of 2 expected')
+    q = f.extract_min()
     print(f'{q}')   # 2
 
-    q = H.extract_min()
-    print('Extract min of 6 expected')
+    q = f.extract_min()
     print(f'{q}')   # 6
 
+    f2 = FibonacciHeap()
+    f2.insert(100)
+    f2.insert(56)
 
-    H2 = FibonacciHeap()
-    H2.insert(100)
-    print('===> 100 inserted')
-    H2.insert(56)
-    print('===> 56 inserted')
-
-    H3 = H.merge(H2)
-    x = H3.root_list.right  # pointer to random node
-    H3.decrease_key(x, 1)
+    f3 = f.merge(f2)
+    x = f3.root_list.right  # pointer to random node
+    f3.decrease_key(x, 1)
 
     # print the root list using the iterate class method
-    list_root = [x.key for x in H3.iterate(H3.root_list)]
-    print('Root-list [10, 1, 56] expected')
-    print(f'===> {list_root}\n')  # [10, 1, 56]
+    list_root = [x.key for x in f3.iterate(f3.root_list)]
+    print(f'The root list={list_root}\n')  # [10, 1, 56]
 
-    q = H3.extract_min()
-    print('Extract min of 1 expected')
+    q = f3.extract_min()
     print(f'{q}')  # 1
-    
-
