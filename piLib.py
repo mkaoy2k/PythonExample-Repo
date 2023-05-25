@@ -173,8 +173,8 @@ def pi_BBP(digits):
 import time
 
 # Main: Estimate Pi value
-if __name__ == '__main__':
-
+def main():
+    
     # Set the number of simulation and terms
     num_max = 10_000_000
 
@@ -229,3 +229,6 @@ if __name__ == '__main__':
     time_taken = stop_time - start_time
     matchDigit(pi)
     print(f'===>Took {time_taken} seconds.\n')
+
+if __name__ == '__main__':
+    main()
