@@ -14,7 +14,7 @@ print(os.getcwd())
 print()
 
 # Change CWD
-dir1 = '/Users/michaelkao/OneDrive/My Projects'
+dir1 = '/Users/michaelkao/OneDrive/My_Projects'
 print('Change CWD to:', dir1)
 os.chdir(dir1)
 print(os.getcwd())
@@ -77,7 +77,7 @@ if os.path.exists(dir2):
     os.removedirs(dir2)
 
 # Directory tree tranversal
-dir1 = '/Users/michaelkao/OneDrive/My Projects/Python'
+dir1 = '/Users/michaelkao/OneDrive/My_Projects/Python'
 
 print('{} directory tree traversal:'.format(dir1))
 for dirpath, dirname, filename in os.walk(dir1):
